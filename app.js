@@ -4,7 +4,7 @@ const server = http.createServer((req,res)=>{
     res.setHeader('Content-Type','text/plain');
     res.end("heelo aws program");
 })
-let port = 8971;
+const port = process.env.port || 3001;
 server.listen(port,()=>{
     console.log(`server is runnning at ${port}`);
 })
